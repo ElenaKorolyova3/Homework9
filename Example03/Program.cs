@@ -11,11 +11,11 @@ Console.Write("Введите положительное число N: ");
 string strNumN = Console.ReadLine();
 int numN = Convert.ToInt32(strNumN);
 
-int AkkerackermanFunct(int numM, int numN)
+int AkkermanFunct(int numM, int numN)
 {
 if (numM == 0) return numN + 1;
-else if (numN == 0) return AkkerackermanFunct(numM - 1, 1);
-else return AkkerackermanFunct(numM - 1, AkkerackermanFunct(numM, numN - 1));
+else if (numN == 0) return AkkermanFunct(numM - 1, 1);
+else return AkkermanFunct(numM - 1, AkkermanFunct(numM, numN - 1));
 }
 
-Console.Write($"Функция Аккермана равна {AkkerackermanFunct(numM, numN)} ");
+Console.Write($"Функция Аккермана равна {AkkermanFunct(numM, numN)} ");
